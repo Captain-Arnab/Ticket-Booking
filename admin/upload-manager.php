@@ -36,7 +36,23 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     } else{
         echo "Error: " . $_FILES["photo"]["error"];
     }
-    $query="UPDATE TRAIN SET upload='".$filename."' where SELECTION='SELECTED' and customer_id='".$_GET['customer_id']."'";
+    $query="UPDATE TRAIN SET upload='".$filename."' where SELECTION='SELECTED' and train_id='".$_GET['train_id']."'";
     $stmt=mysqli_query($con,$query);
 }
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>File Upload Form</title>
+</head>
+<body>
+    <form action="" method="post" enctype="multipart/form-data">
+        <h2>Upload File</h2>
+        <label for="fileSelect">Filename:</label>
+        <input type="file" name="photo" id="fileSelect">
+        <input type="submit" name="submit" value="Upload">
+        <p><strong>Note:</strong> Only .pdf, .jpg, .jpeg, .gif, .png formats allowed to a max size of 10 MB.</p>
+    </form>
+</body>
+</html>

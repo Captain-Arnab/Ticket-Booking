@@ -105,6 +105,8 @@ while ($row1=mysqli_fetch_array($sql1)) {
                                                 <td>PRICE : <?php echo $row1['PRICE'];?></td>
                                                 <td><a href="update1.php?train_id=<?php echo $var3;?>"><button class="btn btn-info">Update</button></a>
                                                 </td>
+                                                <td><a class="btn btn-primary" href="download-ticket.php?train_id=' . $row['train_id'] . '">Download</a></h4></a>
+                                                </td>
                                             </tr>
                                         <?php
                                     }

@@ -14,7 +14,7 @@ $con->close();
       <?php include_once('includes/css.php'); ?>
 <body data-sidebar="dark">
 
-<form action="upload-manager.php" method="POST" enctype="multipart/form-data">
+
 <table id="datatable" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
      <thead>
         <tr>
@@ -33,13 +33,12 @@ $con->close();
                                                 <td>TRAIN NAME: <?php  echo $row['Train_Name'];?></td>
                                                 <td>TRAIN DEPARTURE: <?php  echo $row['DEPARTURE'];?></td>
                                                 <td>PRICE: <?php  echo $row['PRICE'];?></td>
+                                                <td>Train ID:<?php echo $row['train_id'];?></td>
                                                 <td>
-                                                    
-                                                        <input type="file" name="photo">
-                                                        <input type="submit" name="submit" class="btn btn-danger btn-lg btn-block" value="UPLOAD">
+                                                <a href="upload-manager.php?train_id=<?php echo $row['train_id'];?>"><button class="btn btn-info">UPLOAD</button></a>
                                                     
                                                 </td>
                                             </tr>
-</form>
+
 </body>
 </html>
