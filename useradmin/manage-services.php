@@ -61,11 +61,9 @@ if (strlen($_SESSION['id']==0)) {
                                         <h4 class="card-title">Customer Details</h4>
                                        
 
-                                        <table id="datatable" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+                                        <table id="datatable" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 10px; border: 1px black;width: 100%;">
                                             <thead>
-                                            <tr>
-                                                <th>username</th>
-                                                <td><?php
+                                <?php
 
 $var=$_SESSION['id'];
 //echo $var;
@@ -74,8 +72,6 @@ $cnt=1;
 while ($row=mysqli_fetch_array($sql)) {
 
 ?>
-                                                <?php  echo $row['username'];?></td>
-                                            </tr>
                                             <tr>
                                                 <th>FROM</th>
                                                     <td><?php echo $row['from1'];?></td>
@@ -105,7 +101,15 @@ while ($row1=mysqli_fetch_array($sql1)) {
                                                 <td>PRICE : <?php echo $row1['PRICE'];?></td>
                                                 <td><a href="update1.php?train_id=<?php echo $var3;?>"><button class="btn btn-info">Update</button></a>
                                                 </td>
-                                                <td><a class="btn btn-primary" href="download-ticket.php?train_id=' . $row['train_id'] . '">Download</a></h4></a>
+                                                <td><?php $var4=$row1['upload'];
+                                                if($var4)
+                                                    { ?>
+                                                <a class="btn btn-info" href="receive1.php?file=<?php echo "$var4";?>">Download File</a>
+                                                <?php
+                                            }
+                                            else
+                                                continue;
+                                            ?>
                                                 </td>
                                             </tr>
                                         <?php

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3308
--- Generation Time: Aug 03, 2022 at 04:42 PM
+-- Generation Time: Aug 07, 2022 at 05:24 PM
 -- Server version: 8.0.18
 -- PHP Version: 7.3.12
 
@@ -125,21 +125,21 @@ CREATE TABLE IF NOT EXISTS `train` (
   `customer_id` int(11) NOT NULL,
   `upload` varchar(200) NOT NULL,
   PRIMARY KEY (`train_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=71 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=73 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `train`
 --
 
 INSERT INTO `train` (`train_id`, `Train_Name`, `DEPARTURE`, `PRICE`, `SELECTION`, `customer_id`, `upload`) VALUES
-(63, '124', '07:08', '1300', 'SELECTED', 7, ''),
+(63, '124', '07:08', '1300', 'SELECTED', 7, 'Structure.pdf'),
 (62, '123', '06:08', '1400', '', 7, ''),
-(58, '78936', '18:09', '1300', '', 8, ''),
+(58, '78936', '18:09', '1300', 'SELECTED', 8, 'Sum of series Page-1.pdf'),
 (59, '4506', '17:09', '110', '', 8, ''),
-(60, '14789', '18:31', '1000', 'SELECTED', 9, ''),
+(60, '14789', '18:31', '1000', 'SELECTED', 9, 'Funcation Overloading.pdf'),
 (61, '12369', '19:20', '2000', '', 9, ''),
-(70, '', '', '', '', 0, 'Inheritance.pdf'),
-(69, '', '', '', '', 0, 'Number pattern.pdf');
+(71, '12457', '23:49', '1200', 'SELECTED', 6, 'String.pdf'),
+(72, '12458', '00:51', '1300', 'SELECTED', 6, 'Constructor.pdf');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
